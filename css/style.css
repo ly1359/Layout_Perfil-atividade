@@ -12,17 +12,55 @@ a{
     text-decoration: none;
 }
 
-header{
+.topo {
     width: 100%;
     height: 200px;
     background-color: aqua;
     display: flex;
-    justify-content: left;
-    padding-left: 75%;
+    justify-content: space-between;
+    align-items: center;
+   
 }
 
-nav {
+main{
+    background-color: bisque;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 200px 200px 100px;
+    grid-template-areas: 
+        "aside section"
+        "aside section"
+        "aside section";
+}
+.sidebar{
+    grid-area: aside;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    background-color: darkkhaki;
+}
+
+div .imagem{
+    padding: 25px 0;
+    width: 150px;
+    height: 200px; 
+}
+
+.redesSociais{
+    padding: 23px 0px;
+    background-color: darksalmon;
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px;
+    /* baixar imagens maiores */
+}
+.texto{
+    grid-area: section;
+    background-color: azure;
+    height: 500px;
+    width: 800px;
+
+
 }
