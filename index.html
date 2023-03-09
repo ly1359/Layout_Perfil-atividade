@@ -1,21 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-thema="dark">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/index.js"></script>
+    <script>
+        const changeThemaToDark = () =>{
+            document.documentElement.setAttribute("data-thema", "light");
+            localStorage.setItem("data-thema", 'dark');
+        }
+
+        const chageThemaToLight = () =>{
+            document.documentElement.setAttribute("data-thema", "light");
+            localStorage.setItem("data-thema", 'light');
+        }
+    </script>
+
     <title>Portfolio???</title>
 </head>
 <body>
+
     <header class="topo">
-        <!-- aqui vai ficar  a barra com os link para home|educação|interesse|hobbies -->
         <div></div>
         <nav>
             <ul class="menu" >
                <a href="#">Home</a>
-               <a href="#">Educação</a>
                <a href="#">Habilidades</a>
                <a href="#">Hobbies</a>
             </ul>
@@ -32,10 +45,12 @@
             </nav>
 
             <div class="modo">
-                <input class="checkbox" type="checkbox" name="checkbox" id="checkbox">
-                <label class="label" for="checkbox">
-                    <i class="fass fa-moon"><img src="/img/lua-crescente.png" alt=""></i>
-                    <i class="fass fa-sun"><img src="/img/brilho.png" alt=""></i>
+                <input type="checkbox" name="chk" id="chk" onclick="index.js">
+                <label class="label" for="chk">
+                   <img class="fass sun" src="/img/brilho.png" alt="">
+                    <img class="fass moon" src="/img/lua-crescente.png" alt=""> 
+                    
+                  
                     <div class="ball"></div>
                 </label>
             </div>
@@ -43,10 +58,12 @@
             e link para a pagina do Github e linked
             talvez a opção de modo light/night -->
         </aside>
+
         <section class="texto">
             <h1>jfjaçdhfaiahdfkmmbvkajsdfhk</h1>
         </section>
         <!-- texto com as informações -->
     </main>
+    
 </body>
 </html>
