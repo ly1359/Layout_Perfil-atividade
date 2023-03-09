@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: #141b41;
+    transition: background 0.2s linear;
+}
+
+body.ligth{
+    background: #23c9ff;
+}
+
 ul{
     list-style: none;
 }
@@ -14,12 +23,26 @@ a{
 
 .topo {
     width: 100%;
-    height: 200px;
-    background-color: aqua;
+    height: 100px;
+    background-color: #141b41;
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+    
+}
+
+.topo a{
+    color: #306bac;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 3px 5px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.topo a:hover{
+    background-color: #6f9ceb;
+
 }
 
 main{
@@ -38,24 +61,90 @@ main{
     display: flex;
     flex-direction: column;
     width: 200px;
-    background-color: darkkhaki;
+    border-radius: 15px;
+    background-color: #141b41;
+    padding: 25px 0;
 }
 
 div .imagem{
+    background-color: #306bac;
+    border-radius: 15px;
     padding: 25px 0;
     width: 150px;
     height: 200px; 
+    border: 4px solid;
 }
 
-.redesSociais{
-    padding: 23px 0px;
-    background-color: darksalmon;
+.redesSociais {
+    background-color: #306bac;
     width: 150px;
+    height: 80px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    border: 4px solid;
     border-radius: 15px;
     /* baixar imagens maiores */
 }
+
+.redesSociais a img{
+    width: 50px;
+    height: 50px;
+}
+
+.modo{
+    background-color: #306bac;
+    width: 150px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid;
+    border-radius: 15px;
+
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+
+}
+
+.label{
+    background-color: #23c9ff;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+
+    height: 24px;
+    width: 50px;
+
+    transform: scale(1.5);
+}
+
+.label .ball{
+    background-color: aliceblue;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    height: 23px;
+    width: 23px;
+
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+    
+}
+
 .texto{
     grid-area: section;
     background-color: azure;
