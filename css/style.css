@@ -1,13 +1,13 @@
-html{
-    --cor-principal: #141B41;
-    --segunda-cor: #306BAC;
-    --topo-backgroud-btn:  #6F9CEB;
+html[data-thema="dark"]{
+    --main-color: #141B41;
+    --second-color: #306BAC;
+    --top-backgroud-btn:  #6F9CEB;
 }
 
 html[data-thema="light"]{
-    --cor-principal: #89A1EF;
-    --segunda-cor: #EF9CDA;
-    --topo-backgroud-btn: #FECEF1;
+    --main-color: #89A1EF;
+    --second-color: #EF9CDA;
+    --top-backgroud-btn: #FECEF1;
 }
 
 *{
@@ -17,8 +17,8 @@ html[data-thema="light"]{
 }
 
 body{
-    background-color: var(--cor-principal);
-    transition: background 0.2s linear;
+    background-color: var(--main-color);
+    transition: 0.2s linear;
 }
 
 ul{
@@ -32,7 +32,7 @@ a{
 .topo {
     width: 100%;
     height: 100px;
-    background-color: var(--cor-principal);
+    background-color: var(--main-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,7 +40,7 @@ a{
 }
 
 .topo a{
-    color: var(--segunda-cor);
+    color: var(--second-color);
     font-weight: bold;
     font-size: 25px;
     padding: 3px 5px;
@@ -49,7 +49,7 @@ a{
 }
 
 .topo a:hover{
-    background-color: var(--topo-backgroud-btn);
+    background-color: var(--top-backgroud-btn);
 
 }
 
@@ -70,12 +70,13 @@ main{
     flex-direction: column;
     width: 200px;
     border-radius: 15px;
-    background-color: var(--cor-principal);
+    background-color: var(--main-color);
     padding: 25px 0;
+    transition: 0.2s linear;
 }
 
 div .imagem{
-    background-color: var(--segunda-cor);
+    background-color: var(--second-color);
     border-radius: 15px;
     padding: 25px 0;
     width: 150px;
@@ -84,7 +85,7 @@ div .imagem{
 }
 
 .redesSociais {
-    background-color: var(--segunda-cor);
+    background-color: var(--second-color);
     width: 150px;
     height: 80px;
     display: flex;
@@ -101,7 +102,7 @@ div .imagem{
 }
 
 .modo{
-    background-color: var(--segunda-cor);
+    background-color: var(--second-color);
     width: 150px;
     height: 80px;
     display: flex;
@@ -119,7 +120,7 @@ div .imagem{
 }
 
 .label{
-    background-color: var(--cor-principal);
+    background-color: var(--main-color);
     border-radius: 50px;
     cursor: pointer;
     display: flex;

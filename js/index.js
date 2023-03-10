@@ -1,20 +1,20 @@
-//pega o checkbox
-const chk = document.getElementById('chk');
+function changeThema(){
+    const checkbox = document.getElementById('chk');
 
-//verifica se tem no localStorage seleção do light thema
-if(localStorage.getItem('data-thema') == 'light'){
-    chk.checked = true;
+    checkbox.addEventListener('change', ({target}) => {
+        target.checked ? chageThemaToLight() : changeThemaToDark()
+    })
+
+    const changeThemaToDark = () =>{
+        document.documentElement.setAttribute("data-thema", "dark");
+        localStorage.setItem("data-thema", 'dark');
+    }
+
+    const chageThemaToLight = () =>{
+        document.documentElement.setAttribute("data-thema", "light");
+        localStorage.setItem("data-thema", 'light');
+    }
 }
 
-//liga a função
-chk.addEventListener('change', () => {
-    let thema = localStorage.getItem('data-thema');
-    console.log(chk)
-    if(thema.valueOf == 'light'){
-        changeThemaToDark();
-    }else{
-        chageThemaToLight();
-    }
-})
 
 

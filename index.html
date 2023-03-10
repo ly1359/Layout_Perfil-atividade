@@ -8,17 +8,6 @@
 
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/index.js"></script>
-    <script>
-        const changeThemaToDark = () =>{
-            document.documentElement.setAttribute("data-thema", "light");
-            localStorage.setItem("data-thema", 'dark');
-        }
-
-        const chageThemaToLight = () =>{
-            document.documentElement.setAttribute("data-thema", "light");
-            localStorage.setItem("data-thema", 'light');
-        }
-    </script>
 
     <title>Portfolio???</title>
 </head>
@@ -28,9 +17,9 @@
         <div></div>
         <nav>
             <ul class="menu" >
-               <a href="#">Home</a>
-               <a href="#">Habilidades</a>
-               <a href="#">Hobbies</a>
+               <a href="#">Alguma</a>
+               <a href="#">Coisa</a>
+               <a href="#">AquiTBM</a>
             </ul>
         </nav>
     </header>
@@ -45,7 +34,7 @@
             </nav>
 
             <div class="modo">
-                <input type="checkbox" name="chk" id="chk" onclick="index.js">
+                <input type="checkbox" name="chk" id="chk" onclick="changeThema()" placeholder="none">
                 <label class="label" for="chk">
                    <img class="fass sun" src="/img/brilho.png" alt="">
                     <img class="fass moon" src="/img/lua-crescente.png" alt=""> 
