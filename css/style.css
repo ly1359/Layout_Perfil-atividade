@@ -15,6 +15,7 @@ html[data-thema="light"]{
 :root{
     --main-font: sans-serif;
     --second-font: monospace;
+    --text-font:  Arial, Helvetica, sans-serif;
 
 }
 
@@ -27,6 +28,7 @@ html[data-thema="light"]{
 
 body{
     background-color: var(--main-color);
+    font-family: var(--main-font);
 }
 
 ul{
@@ -62,17 +64,41 @@ a{
 }
 
 .main{
-    background-color: bisque;
+    background-color: var(--main-color);
     width: 1000px;
+  
+}
+
+.first{
     display: grid;
+    justify-content: space-between;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 200px 200px 100px;
     grid-template-areas: 
-        "section aside"
-        "section aside"
-        "section aside";
+        "aside section"
+        "aside section"
+        "aside section";
 }
-.main .sidebar{
+
+.text{
+    grid-area: section;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+}
+
+.text .hi{
+    margin: 50px 0px 25px 0px;
+    color: var(--main-color);
+    background-color: var(--top-backgroud-btn);
+    font-family: var(--second-font);
+    font-size: 14px;
+    width: 200px;
+    
+}
+
+
+.sidebar{
     grid-area: aside;
     display: flex;
     flex-direction: column;
@@ -167,41 +193,39 @@ a{
     width: 20px;
 }
 
-.text{
-    grid-area: section;
-    width: 800px;
-    flex-direction: column;
-
-    background-color: var(--main-color);
-}
-
-.text .hi{
-    justify-content: start;
-    margin: 25px 0px 25px 4px;
-    color: var(--main-color);
-    background-color: var(--top-backgroud-btn);
-    font-family: var(--second-font);
-    font-size: 14px;
-    width: 200px;
-    
-}
-
-.text .name{
-    color: var(--second-color);
-    justify-content: start;
-    font-family: var(--main-font);
-    font-size: 29px;
-}
-
-.text .introduction{
-    margin-top: 3px;
-    justify-content: start;
-    color: var(--top-backgroud-btn);
-    font-family: var(--main-font);
-}
 
 .about{
-    
     color: var(--top-backgroud-btn);
-    font-family: var(--main-font);
+    width: 100%;
+    height: 500px;
+    display: block;
+}
+
+.title{
+    margin: 10px 50px ;
+    font-size: xx-large;
+    color: var(--second-color);
+    font-family: var(--second-font);
+}
+
+.content{
+    display: flex;
+    margin: 15px 15px;
+
+    font-size: larger;
+    width: 40%;
+    color: var(--top-backgroud-btn);
+    font-family: var(--text-font);
+}
+
+.language {
+    display: flex;
+
+    height: 64px;
+}
+
+.hobbies{
+    width: 100%;
+    height: 500px;
+    background-color: #ba4d56;
 }
