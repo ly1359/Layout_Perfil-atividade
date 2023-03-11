@@ -2,23 +2,31 @@ html[data-thema="dark"]{
     --main-color: #141B41;
     --second-color: #306BAC;
     --top-backgroud-btn:  #6F9CEB;
+    --border-color: black;
 }
 
 html[data-thema="light"]{
-    --main-color: #89A1EF;
-    --second-color: #EF9CDA;
+    --main-color: #E5EBEA;
+    --second-color: #d75863;
     --top-backgroud-btn: #FECEF1;
+    --border-color: #ba4d56;
+}
+
+:root{
+    --main-font: sans-serif;
+    --second-font: monospace;
+
 }
 
 *{
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
+    transition: 0.2s linear;
 }
 
 body{
     background-color: var(--main-color);
-    transition: 0.2s linear;
 }
 
 ul{
@@ -53,18 +61,18 @@ a{
 
 }
 
-main{
+.main{
     background-color: bisque;
     width: 1000px;
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 200px 200px 100px;
     grid-template-areas: 
-        "aside section"
-        "aside section"
-        "aside section";
+        "section aside"
+        "section aside"
+        "section aside";
 }
-.sidebar{
+.main .sidebar{
     grid-area: aside;
     display: flex;
     flex-direction: column;
@@ -72,16 +80,15 @@ main{
     border-radius: 15px;
     background-color: var(--main-color);
     padding: 25px 0;
-    transition: 0.2s linear;
 }
 
-div .imagem{
+.imagem{
     background-color: var(--second-color);
     border-radius: 15px;
     padding: 25px 0;
     width: 150px;
     height: 200px; 
-    border: 4px solid;
+    border: 4px solid var(--border-color);
 }
 
 .redesSociais {
@@ -91,9 +98,8 @@ div .imagem{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 4px solid;
-    border-radius: 15px;
-    /* baixar imagens maiores */
+    border: 4px solid var(--border-color);
+    border-radius: 15px; 
 }
 
 .redesSociais a img{
@@ -108,7 +114,7 @@ div .imagem{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 4px solid;
+    border: 4px solid var(--border-color);
     border-radius: 15px;
 
 }
@@ -141,6 +147,7 @@ div .imagem{
     display: flex;
     align-items: center;
     position: absolute;
+
     top: 1px;
     left: 2px;
 
@@ -160,11 +167,41 @@ div .imagem{
     width: 20px;
 }
 
-.texto{
+.text{
     grid-area: section;
-    background-color: azure;
-    height: 500px;
     width: 800px;
+    flex-direction: column;
 
+    background-color: var(--main-color);
+}
 
+.text .hi{
+    justify-content: start;
+    margin: 25px 0px 25px 4px;
+    color: var(--main-color);
+    background-color: var(--top-backgroud-btn);
+    font-family: var(--second-font);
+    font-size: 14px;
+    width: 200px;
+    
+}
+
+.text .name{
+    color: var(--second-color);
+    justify-content: start;
+    font-family: var(--main-font);
+    font-size: 29px;
+}
+
+.text .introduction{
+    margin-top: 3px;
+    justify-content: start;
+    color: var(--top-backgroud-btn);
+    font-family: var(--main-font);
+}
+
+.about{
+    
+    color: var(--top-backgroud-btn);
+    font-family: var(--main-font);
 }
