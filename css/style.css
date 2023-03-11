@@ -7,9 +7,9 @@ html[data-thema="dark"]{
 
 html[data-thema="light"]{
     --main-color: #E5EBEA;
-    --second-color: #d75863;
-    --top-backgroud-btn: #FECEF1;
-    --border-color: #ba4d56;
+    --second-color: #D75863;
+    --top-backgroud-btn: #63768d;
+    --border-color: #D75863;
 }
 
 :root{
@@ -42,7 +42,6 @@ a{
 .topo {
     width: 100%;
     height: 100px;
-    background-color: var(--main-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,9 +63,7 @@ a{
 }
 
 .main{
-    background-color: var(--main-color);
     width: 1000px;
-  
 }
 
 .first{
@@ -87,7 +84,7 @@ a{
     display: flex;
 }
 
-.text .hi{
+.hi{
     margin: 50px 0px 25px 0px;
     color: var(--main-color);
     background-color: var(--top-backgroud-btn);
@@ -104,7 +101,6 @@ a{
     flex-direction: column;
     width: 200px;
     border-radius: 15px;
-    background-color: var(--main-color);
     padding: 25px 0;
 }
 
@@ -152,7 +148,6 @@ a{
 }
 
 .label{
-    background-color: var(--main-color);
     border-radius: 50px;
     cursor: pointer;
     display: flex;
@@ -160,6 +155,7 @@ a{
     justify-content: space-between;
     padding: 5px;
     position: relative;
+    background-color: var(--main-color);
 
     height: 24px;
     width: 50px;
@@ -186,7 +182,6 @@ a{
 
 #chk:checked + .label .ball{
     transform: translateX(24px);
-    
 }
 
 .fass {
@@ -218,14 +213,37 @@ a{
     font-family: var(--text-font);
 }
 
-.language {
+.technologies {
     display: flex;
-
-    height: 64px;
+    border-radius: 15px;
+    border: 2px var(--second-color) solid;
+    height: 70px;
 }
 
 .hobbies{
     width: 100%;
     height: 500px;
     background-color: #ba4d56;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 200px 200px 100px;
+    grid-template-areas: 
+        "title title"
+        "Interests language"
+        "Interests language";
+}
+
+.Interests{
+    grid-area: Interests;
+    display: flex;
+}
+
+.Interests .img{
+    width: 2px;
+    height: 2px;
+}
+
+.language{
+    grid-area: language;
+    height: 25px;
+    display: flex;
 }
