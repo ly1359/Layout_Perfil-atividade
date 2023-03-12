@@ -220,7 +220,7 @@ a{
 
 .hobbies{
     width: 100%;
-    height: 500px;
+    height: 300px;
 
     display: flex;
     align-items: center;
@@ -250,15 +250,6 @@ a{
     transform: scale(1.5);
 }
 
-.Interests .descricao{
-    
-
-}
-
-.Interests .descricao:hover{
-    visibility: visible;
-}
-
 .language ul{
     width: 350px;
     height: 200px;
@@ -268,7 +259,7 @@ a{
     flex-direction: column;
 }
 
-.language .p {
+.language .p{
     color: var(--second-color);
     font-size:  large;
     margin: 0px 25px;
