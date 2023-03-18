@@ -1,15 +1,27 @@
 html[data-thema="dark"]{
     --main-color: #141B41;
     --second-color: #306BAC;
-    --top-backgroud-btn:  #6F9CEB;
+    --top-backgroud-btn: #6F9CEB;
     --border-color: black;
 }
 
 html[data-thema="light"]{
     --main-color: #E5EBEA;
-    --second-color: #D75863;
-    --top-backgroud-btn: #63768d;
+    --second-color: #f04c5a;
+    --top-backgroud-btn: #5c5e66;
     --border-color: #D75863;
+}
+
+html ::-webkit-scrollbar {
+    width: 10px;
+  }
+html ::-webkit-scrollbar-thumb {
+border-radius: 50px;
+background: var(--second-color);
+}
+html ::-webkit-scrollbar-track {
+border-radius: 50px;
+background: var(--top-backgroud-btn);
 }
 
 :root{
@@ -46,6 +58,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
 }
 
 .top a{
@@ -61,7 +74,7 @@ a{
 }
 
 .main{
-    width: 1000px;
+    max-width: 1000px;
 }
 
 .first{
@@ -154,8 +167,8 @@ a{
     position: relative;
     background-color: var(--main-color);
 
-    height: 24px;
-    width: 50px;
+    height: 28px;
+    width: 56px;
 
     transform: scale(1.5);
 }
@@ -170,8 +183,8 @@ a{
     top: 1px;
     left: 2px;
 
-    height: 22px;
-    width: 22px;
+    height: 27px;
+    width: 27px;
 
     transform: translateX(0px);
     transition: transform 0.2s linear;
@@ -182,7 +195,7 @@ a{
 }
 
 .fass {
-    width: 20px;
+    width: 24px;
 }
 
 
@@ -197,11 +210,12 @@ a{
     color: var(--second-color);
     font-family: var(--second-font);
 
-    margin: 10px 50px ;
+    margin: 10px 50px;
 }
 
 .content{
     display: flex;
+    justify-content: end;
     margin: 15px 15px;
 
     font-size: larger;
@@ -213,7 +227,7 @@ a{
 .technologies {
     border-radius: 15px;
     border: 3px solid var(--second-color);
-    height: 70px;
+    height: 64px;
     
     display: flex;
 }
@@ -246,6 +260,7 @@ a{
     width: 50px;
     height: 50px;
 }
+
 .Interests img:hover{
     transform: scale(1.5);
 }
@@ -290,4 +305,81 @@ a{
     background-color: var(--second-color);
 
     display: flex;
+}
+
+@media(max-width: 412px) {
+    *{
+        margin: 0;
+
+    }
+    .top{
+        display: block;
+        position: relative;
+        height: 60px;
+    }
+    .top a{
+        font-size: 30px;
+    }
+    .main{
+        padding: 0 15px;
+    }
+
+    .first{
+        display: block;
+    }
+    .text{
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .content{
+        width: 300px;
+        margin: 0;
+    }
+    .sidebar{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 120px 120px;
+        grid-template-areas: 
+            "imagem midias"
+            "imagem mode";
+    }
+    .imagem{
+        grid-area: imagem;
+    }
+    .socialsMedias{
+        grid-area: midias;
+    }
+    .mode{
+        grid-area: mode;
+    }
+
+    .about{
+        max-width: 100%;
+    }
+    .about .content{
+        font-size: 20px;
+        margin: 15px 15px;
+    }
+    .technologies{
+        border: none;
+    }
+
+    .moret{
+        margin: 80px 50px;
+    }
+
+    .more{
+        display: block;
+    }
+    .Interests ul{
+        border: none;
+    }
+    .language .p{
+        margin-top: 50px;
+    }
+   .bars p{
+        margin: 0 25px;
+   }
 }
