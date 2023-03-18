@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/index.js"></script>
+    <!-- <script src="js/MobileMenu.js"></script> -->
 
     <title>Dielly Lopes</title>
 </head>
@@ -16,13 +17,16 @@
 
     <header class="top">
         <div></div>
-        <nav>
-            <ul class="menu" >
-               <a href="#">Home</a>
-               <a href="https://ly1359.github.io/Layout_Perfil-atividade/#about" aria-label="shortcut link">About Me</a>
-               <a href="https://ly1359.github.io/Layout_Perfil-atividade/#more" aria-label="shortcut link">Hobbies</a>
+        <div onclick="mobileMenu()" class="mobile-menu" id="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+            <ul class="menu" id="menu" >
+                <li class="li"><a href="#">Home</a></li>
+                <li class="li"><a href="https://ly1359.github.io/Layout_Perfil-atividade/#about" aria-label="shortcut link">About Me</a></li>
+                <li class="li"><a href="https://ly1359.github.io/Layout_Perfil-atividade/#more" aria-label="shortcut link">Hobbies</a></li>
             </ul>
-        </nav>
     </header>
 
     <main class="main">
