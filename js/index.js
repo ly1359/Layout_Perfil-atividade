@@ -47,5 +47,18 @@ function mobileMenu(){
     
 }
 
+if('sericeWorker' in navigator){
+    window.addEventListener('load', () => {
+        navigator.serviceWorker
+        .register('service-worker.js')
+        .then(registration => {
+            console.log('Service Worker REgistrado com Sucesso', registration);
+        })
+        .catch(error =>{
+            console.log('Falha ao Registrar o Service Worker', error);
+        });
+    });
+}
+
 
 
